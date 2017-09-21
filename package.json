@@ -1,0 +1,18 @@
+{
+  "name": "shaddock",
+  "version": "1.0.0",
+  "description": "something about push",
+  "main": "shaddock.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "push"
+  ],
+  "author": "sydhappy123@163.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "socket.io": "^2.0.3"
+  }
+}

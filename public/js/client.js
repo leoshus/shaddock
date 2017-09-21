@@ -63,12 +63,10 @@
 
             //添加系统消息
             var html = '';
-            html += '
-            ';
+            html += '';
             html += user.username;
             html += (action == 'login') ? ' 加入了聊天室' : ' 退出了聊天室';
-            html += '
-            ';
+            html += '';
             var section = d.createElement('section');
             section.className = 'system J-mjrlinkWrap J-cutMsg';
             section.innerHTML = html;
@@ -96,7 +94,7 @@
             this.scrollToBottom();
 
             //连接websocket后端服务器
-            this.socket = io.connect('ws://realtime.plhwin.com:3000');
+            this.socket = io.connect('ws://localhost:3000');
 
             //告诉服务器端有用户登录
             this.socket.emit('login', {userid:this.userid, username:this.username});

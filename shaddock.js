@@ -1,10 +1,20 @@
-var app = require('express')();
+ var express = require('express');
+ var path = require('path');
+ var app = express();
+ // var ejs = require('ejs');
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
+app.use('/',express.static(__dirname + '/public'));
+ app.set('views', path.join(__dirname, 'views'));
+ // app.engine('.html', ejs.__express);
+ // app.set('view engine', 'html');
 app.get('/', function(req, res){
     res.send('<h1>Welcome Realtime Server</h1>');
 });
+ app.get('/index', function (req, res) {
+     res.render('index');
+ });
 
 //在线用户
 var onlineUsers = {};
